@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theniazian.io - 100% Referral Platform</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
+    h1 { color: #333; }
+    .referral { margin-top: 20px; font-size: 18px; color: #008000; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Theniazian.io</h1>
+  <p>Join through referral and the referrer gets 100% partner benefit!</p>
+  <div class="referral" id="referralInfo"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get('ref');
+    if (ref) {
+      document.getElementById("referralInfo").textContent = `You joined using referral code: ${ref}`;
+    } else {
+      document.getElementById("referralInfo").textContent = "No referral code used.";
+    }
+  </script>
+</body>
+</html>
